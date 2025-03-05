@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Example</title>
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+<button class="open-popup">Open Modal</button>
+
+<div class="popup-wrap">
+    <article class="popup">
+        <div class="popup__close">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10M10 10L19 19M10 10L1 19M10 10L19 1" stroke="#313131" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <div class="popup__response">
+            <p class="popup__text"></p>
+            <button class="popup__button">Заполнить еще раз</button>
+        </div>
+        <div class="popup__container">
+            <header class="popup__header">
+                <p class="popup__title">
+                    Оставьте Ваши контакты
+                    <span>Для получения консультации</span>
+                </p>
+            </header>
+            <section class="popup__content">
+                <input class="popup__input" type="text" placeholder="Ваше имя">
+                <input class="popup__input" type="tel" placeholder="Номер телефона">
+                <button class="popup__button">Оставить заявку
+                    <svg width="32" height="15" viewBox="0 0 32 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 6.5C0.447715 6.5 0 6.94772 0 7.5C0 8.05228 0.447715 8.5 1 8.5L1 6.5ZM31.7071 8.20711C32.0976 7.81658 32.0976 7.18342 31.7071 6.79289L25.3431 0.428932C24.9526 0.0384078 24.3195 0.0384078 23.9289 0.428932C23.5384 0.819457 23.5384 1.45262 23.9289 1.84315L29.5858 7.5L23.9289 13.1569C23.5384 13.5474 23.5384 14.1805 23.9289 14.5711C24.3195 14.9616 24.9526 14.9616 25.3431 14.5711L31.7071 8.20711ZM1 8.5L31 8.5V6.5L1 6.5L1 8.5Z" fill=""></path>
+                    </svg>
+                </button>
+            </section>
+            <footer class="popup__footer">
+                <a class="popup__policy">*Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных.</a>
+            </footer>
+        </div>
+    </article>
+</div>
+
+<script src="modal.js"></script>
+</body>
+</html>

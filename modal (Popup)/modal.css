@@ -1,0 +1,202 @@
+/* Popup CSS */
+.popup-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box; /* Для поддержки старых версий Safari и iOS */
+    display: -ms-flexbox; /* Для поддержки старых версий IE */
+    display: flex; /* Современный стандарт */
+    -webkit-box-align: center; /* Для поддержки старых версий Safari и iOS */
+    -ms-flex-align: center; /* Для поддержки старых версий IE */
+    align-items: center; /* Современный стандарт */
+    -webkit-box-pack: center; /* Для поддержки старых версий Safari и iOS */
+    -ms-flex-pack: center; /* Для поддержки старых версий IE */
+    justify-content: center; /* Современный стандарт */
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+
+    visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Для поддержки старых версий Safari и iOS */
+    backface-visibility: hidden; /* Современный стандарт */
+}
+
+.popup {
+    position: relative;
+
+    width: 550px;
+    height: 550px;
+    -webkit-border-radius: 16px; /* Для поддержки старых версий Safari и iOS */
+    -moz-border-radius: 16px; /* Для поддержки старых версий Firefox */
+    border-radius: 16px; /* Современный стандарт */
+}
+
+.popup__close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+}
+
+.popup__container {
+    padding: 119px 50px 50px 50px;
+}
+
+.popup__header {
+    margin-bottom: 60px;
+}
+
+.popup__title {
+    /*font-family: var(--medium);*/
+    /*font-size: 28px;*/
+    /*line-height: 1;*/
+    /*color: #313131;*/
+    text-align: center;
+}
+
+.popup__title span {
+    display: block;
+}
+
+.popup__content {
+    display: -webkit-box; /* Для поддержки старых версий Safari и iOS */
+    display: -ms-flexbox; /* Для поддержки старых версий IE */
+    display: flex; /* Современный стандарт */
+    -webkit-box-orient: vertical; /* Для поддержки старых версий Safari и iOS */
+    -webkit-box-direction: normal; /* Для поддержки старых версий Safari и iOS */
+    -ms-flex-direction: column; /* Для поддержки старых версий IE */
+    flex-direction: column; /* Современный стандарт */
+    gap: 20px; /* Современный стандарт */
+
+    margin-bottom: 30px;
+}
+
+.popup__input {
+    padding: 16px 30px;
+    -webkit-border-radius: 16px; /* Для поддержки старых версий Safari и iOS */
+    -moz-border-radius: 16px; /* Для поддержки старых версий Firefox */
+    border-radius: 16px; /* Современный стандарт */
+    /*background: #F5FBFF;*/
+    /*font-family: var(--main);*/
+    /*font-size: 16px;*/
+    /*line-height: 1.05;*/
+    /*color: #313131;*/
+}
+
+.popup__input::placeholder {
+    /*font-family: ;*/
+    /*font-size: 16px;*/
+    /*line-height: 1.2;*/
+    /*color: #2C2C2C66;*/
+}
+
+.popup__button {
+    display: -webkit-box; /* Для поддержки старых версий Safari и iOS */
+    display: -ms-flexbox; /* Для поддержки старых версий IE */
+    display: flex; /* Современный стандарт */
+    -webkit-box-align: center; /* Для поддержки старых версий Safari и iOS */
+    -ms-flex-align: center; /* Для поддержки старых версий IE */
+    align-items: center; /* Современный стандарт */
+    -webkit-box-pack: center; /* Для поддержки старых версий Safari и iOS */
+    -ms-flex-pack: center; /* Для поддержки старых версий IE */
+    justify-content: center; /* Современный стандарт */
+    gap: 16px; /* Современный стандарт */
+
+    -webkit-border-radius: 30px; /* Для поддержки старых версий Safari и iOS */
+    -moz-border-radius: 30px; /* Для поддержки старых версий Firefox */
+    border-radius: 30px; /* Современный стандарт */
+    padding: 16px 30px;
+    /*font-family: var(--medium);*/
+    /*font-size: 16px;*/
+    /*line-height: 1.3;*/
+    /*color: #F9F9F9;*/
+}
+
+.popup__button:hover {
+    cursor: pointer;
+    background: #1d793f;
+}
+
+.popup__button svg {
+    fill: #F9F9F9;
+}
+
+.popup__footer {
+    /*font-family: var(--medium);*/
+    /*font-size: 16px;*/
+    /*line-height: 1.05;*/
+    /*color: #313131;*/
+    text-align: center;
+    cursor: pointer;
+}
+
+.popup__response {
+    display: none;
+}
+
+.popup__text {
+    /*font-family: ;*/
+    /*font-size: 28px;*/
+    /*line-height: 1;*/
+    /*color: #313131;*/
+    text-align: center;
+}
+
+.popup__text span {
+    display: block;
+}
+
+/* Popup Animation */
+.popup {
+    /* Fade in and scale up */
+    -webkit-transform: scale(0.5); /* Для поддержки старых версий Safari и iOS */
+    -moz-transform: scale(0.5); /* Для поддержки старых версий Firefox */
+    -ms-transform: scale(0.5); /* Для поддержки старых версий IE */
+    transform: scale(0.5); /* Современный стандарт */
+    opacity: 0;
+    -webkit-transition: all 0.3s; /* Для поддержки старых версий Safari и iOS */
+    -moz-transition: all 0.3s; /* Для поддержки старых версий Firefox */
+    transition: all 0.3s; /* Современный стандарт */
+}
+
+.popup-wrap.active {
+    visibility: visible;
+    -webkit-backface-visibility: visible; /* Для поддержки старых версий Safari и iOS */
+    backface-visibility: visible; /* Современный стандарт */
+}
+
+.popup-wrap.active .popup {
+    -webkit-transform: scale(1); /* Для поддержки старых версий Safari и iOS */
+    -moz-transform: scale(1); /* Для поддержки старых версий Firefox */
+    -ms-transform: scale(1); /* Для поддержки старых версий IE */
+    transform: scale(1); /* Современный стандарт */
+    opacity: 1;
+}
+
+/* Open response */
+.popup__response.active {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box; /* Для поддержки старых версий Safari и iOS */
+    display: -ms-flexbox; /* Для поддержки старых версий IE */
+    display: flex; /* Современный стандарт */
+    -webkit-box-orient: vertical; /* Для поддержки старых версий Safari и iOS */
+    -webkit-box-direction: normal; /* Для поддержки старых версий Safari и iOS */
+    -ms-flex-direction: column; /* Для поддержки старых версий IE */
+    flex-direction: column; /* Современный стандарт */
+    -webkit-box-pack: center; /* Для поддержки старых версий Safari и iOS */
+    -ms-flex-pack: center; /* Для поддержки старых версий IE */
+    justify-content: center; /* Современный стандарт */
+    -webkit-box-align: center; /* Для поддержки старых версий Safari и iOS */
+    -ms-flex-align: center; /* Для поддержки старых версий IE */
+    align-items: center; /* Современный стандарт */
+    gap: 60px; /* Современный стандарт */
+}
+
+.popup__response.active + .popup__container {
+    display: none;
+}
+
+@media (max-width: ) {
+    
+}
